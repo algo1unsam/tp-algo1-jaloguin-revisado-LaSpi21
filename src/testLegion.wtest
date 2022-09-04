@@ -2,6 +2,7 @@ import chicos.*
 import elementos.*
 import adultos.*
 import legion.*
+import barrio.*
 
 test "La capacidad de susto es la suma de las de sus integrantes" {
 	legionDelTerror.agregarIntegrantes([macaria,pancracio])
