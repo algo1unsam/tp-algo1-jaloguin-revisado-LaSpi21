@@ -39,9 +39,9 @@ object mascaraFrankenstein {
 object mascaraPolitico {
 
 	// arranca en este nivel para cumplir con el test "La cantidad de caramelos recibida es correcta" de testLegion.wtest
-	const promesasCampania = 5
+	const promesasCampania = 10
 
-	method nivelSusto() = promesasCampania * 2
+	method nivelSusto() = promesasCampania 
 
 }
 

@@ -32,8 +32,21 @@ object legionDelTerror {
 	}
 
 	method normaSinRepetidos() {
-		self.disfracesRepetidos().forEach({ unDisfraz => integrantes.forEach({ unIntegrante => unIntegrante.quitarDisfraz(unDisfraz)})})
+		self.disfracesRepetidos().forEach({ unDisfraz => self.quitarDisfrazATodos(unDisfraz)})
+		}
+   
+   method quitarDisfrazATodos(disfraz){
+   	integrantes.forEach({ unIntegrante => self.quitarDisfraz(unIntegrante, disfraz)})
 	}
+	
+	method quitarDisfraz(integrante, disfraz){
+		if (integrante.disfraces().contains(disfraz)){
+			integrante.quitarDisfraz(disfraz)
+		}
+		
+	}
+   	
+
 
 	method todosLosDisfraces() {
 		return integrantes.flatMap({ unIntegrante => unIntegrante.disfraces() })
